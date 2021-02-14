@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Site</title>
+</head>
+<body>
+  <div id="after" hidden="true">
+    <div id="yop">
+      <a href="">
+  <div class="card">
+      <img src="https://img.myflixerhd.ru/xxrz/250x400/201/a2/8f/a28f98d29a76c2a90d4effd7d178454a/a28f98d29a76c2a90d4effd7d178454a.jpg" alt="Avatar">
+      <div class="container">
+        <h4><b>Mr. Mayor</b></h4>
+        <p><strong>About: </strong>A retired businessman runs for mayor of Los Angeles to prove he's "still got it." Once he wins, he has to figure out what he stands for, gain the respect of his biggest critic and connect with his teenage daughter, all while trying to get anything right for America's second weirdest city.</p> <!--BIO-->
+        <p><strong>Genre: </strong>Comedy</p> <!--GENRE-->
+        <p><strong>Released: </strong>2021-01-07</p> <!--RELEASE-->
+      </div>
+    </div>
+  </a>
+  <a href="https://vidcloud.msk.ru/embed4/fzci90ocn8hu0?i=1383517d588d4d0f09e181f17b4c89ad44c1e67abb61c6dcfc88c41ed516278544d24c4159f13c668716811f4a1c3abb&el=2508176">
+    <div class="card">
+      <img src="https://img.myflixerhd.ru/xxrz/250x400/201/0d/9c/0d9c2fadc9a1c91cda7d9f4c225e4a76/0d9c2fadc9a1c91cda7d9f4c225e4a76.jpg" alt="Avatar">
+      <div class="container">
+        <h4><b>Bee Movie</b></h4>
+        <p><strong>About: </strong>Barry B. Benson, a parasitic who's just graduated from college, is disillusioned in his solitary career choice: making honey. Barry's life is saved from Vanessa, a florist in New York City. As their relationship blossoms, he discovers humans actually eat honey, and then decides to sue us.</p> <!--BIO-->
+        <p><strong>Genre: </strong>Family, Animation, Adventure, Comedy</p> <!--GENRE-->
+        <p><strong>Released: </strong>2007-10-28</p> <!--RELEASE-->
+      </div>
+    </div>
+  </a>
+    <a href="https://vidcloud.msk.ru/embed4/hn9wx2dzb4j20?i=1383517d588d4d0f09e181f17b4c89ad44c1e67abb61c6dcfc88c41ed516278544d24c4159f13c668716811f4a1c3abb&el=3993988">
+    <div class="card">
+      <img src="https://img.myflixerhd.ru/xxrz/250x400/201/73/21/7321dcdd80203a81e388598f129b7540/7321dcdd80203a81e388598f129b7540.jpg" alt="Avatar">
+      <div class="container">
+        <h4><b>Wonder Woman 1984</b></h4>
+        <p><strong>About: </strong>Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s and finds a formidable foe by the name of the Cheetah.</p> <!--BIO-->
+        <p><strong>Genre: </strong>Fantasy, Action, Adventure</p> <!--GENRE-->
+        <p><strong>Released: </strong>2020-12-16</p> <!--RELEASE-->
+      </div>
+    </div>
+  </a>
+    </div>
+  </div>
+
+    <div id="before">
+        <input type="password" id="form" name="pwd" placeholder="Password Here">
+          <button onclick="checkPassword()" type="submit" id="button" value="Enter">Enter</button>
+    </div>
+
+    
+    <style>
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+img{
+    width: 100%;
+}
+#yop {
+    float: right;
+}
+.card {
+    float: left;
+  margin: 1px;
+  padding: 10px 3px;
+    width: 15%;
+    
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+body {
+  background-color: gray;
+}
+
+#form {
+  width: 400px;
+  padding: 10px;
+  font-size: 18px;
+  outline:none;
+  background: linear-gradient(to left top, #000, #22132e) fixed;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+  transition: all 0.5s;
+}
+
+#form:hover {
+  border: 2px solid rgba(255,255,255,0.5);
+}
+#form:focus {
+  border: 2px solid rgba(255,255,255,0.5);
+  background: linear-gradient(to left top, #000, #4e2d69) fixed;
+}
+
+#button {
+  width: 425px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight:bold;
+  outline:none;
+  background: linear-gradient(to left top, #000, #4e2d69) fixed;
+  border-radius: 10px;
+  border: 5px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+  transition: all 0.5s;
+}
+
+#button:hover {
+  border: 5px solid rgba(255,255,255,0.5);
+  background: linear-gradient(to left top, #000, #8b5db0) fixed;
+}
+
+#button:focus {
+  background: linear-gradient(to left top, #8b5db0, #000) fixed;
+}
+    </style>
+    <script>
+        window.localStorage.setItem("password", "Swagger");
+        function checkPassword() {
+    if (window.localStorage.getItem("password") == document.getElementById("form").value) {
+        document.getElementById("before").hidden = true;
+        document.getElementById("after").hidden = false;
+      } else {
+           alert("Incorrent!");
+      }
+    }
+    </script>
+</body>
+</html>
